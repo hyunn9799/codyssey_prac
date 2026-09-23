@@ -1,6 +1,32 @@
 import argparse
+from typing import Callable, TypeVar
 
-from .repository import DataStore
+from .repository import (
+    CategoryStore,
+    DataStore,
+    TransactionRepository,
+)
+
+from .service import BudgetService
+
+T = TypeVar("T")
+
+def ask_until_valid(
+        message: str,
+        validator : Callable[[str] , T]
+) -> T:
+
+    while True:
+        value = input(message).strip()
+
+        try:
+            return validator(value)
+        except ValueError as error:
+            print(f"[오류] {error}")
+
+
+
+
 
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
