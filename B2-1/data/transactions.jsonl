@@ -1,0 +1,11 @@
+{"id": "TX-B132D1DD", "type": "expense", "date": "2026-09-12", "amount": 15000, "category": "food", "memo": "저녁", "tags": []}
+{"id": "TX-188758BF", "type": "income", "date": "2026-09-23", "amount": 15000, "category": "etc", "memo": "", "tags": []}
+{"id": "TX-557C5BA9", "type": "expense", "date": "2024-01-15", "amount": 15000, "category": "food", "memo": "점심", "tags": ["meal"]}
+{"id": "TX-F45CD65C", "type": "income", "date": "2024-01-16", "amount": 3000000, "category": "salary", "memo": "", "tags": []}
+{"id": "TX-F16E56A3", "type": "expense", "date": "2024-01-12", "amount": 20000, "category": "transport", "memo": "", "tags": []}
+{"id": "TX-AD387515", "type": "expense", "date": "2024-01-15", "amount": 15000, "category": "food", "memo": "점심", "tags": ["meal"]}
+{"id": "TX-F75DD2A3", "type": "income", "date": "2024-01-16", "amount": 3000000, "category": "salary", "memo": "", "tags": []}
+{"id": "TX-22ADF4BA", "type": "expense", "date": "2024-01-12", "amount": 20000, "category": "transport", "memo": "", "tags": []}
+{"id": "TX-FE36BCCD", "type": "income", "date": "2024-01-01", "amount": 9900, "category": "food", "memo": "", "tags": []}
+{"id": "TX-65DB6A4F", "type": "expense", "date": "2024-01-15", "amount": 15000, "category": "food", "memo": "WJATLA", "tags": ["MEAL"]}
+{"id": "TX-48BBB726", "type": "expense", "date": "2026-10-04", "amount": 9900, "category": "food", "memo": "asdf", "tags": []}

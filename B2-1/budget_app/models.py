@@ -5,7 +5,7 @@ from typing import Literal
 class Transaction:
     id: str
     type: Literal["income","expense"]
-    data : str
+    date : str
     amount : int
     category : str
     memo : str = ""
