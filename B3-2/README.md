@@ -1,5 +1,5 @@
 # AI GitGen — Git 커밋 메시지 / PR 초안 생성기
-
+sdfsd
 **Python 3.10+ / CLI / 외부 패키지 설치 불필요 / 필수 과제만 구현 (보너스 제외)**
 
 `git status`, `git diff`에서 변경 파일과 수정 내용을 가져와 OpenAI REST API에 전달하고, **커밋 메시지** 또는 **PR 제목·본문 초안**을 터미널에 출력합니다. 자동 `git commit`, `git push`, PR 생성은 **하지 않습니다**. 생성된 문장은 사람이 검토 후 복사해서 사용합니다.
