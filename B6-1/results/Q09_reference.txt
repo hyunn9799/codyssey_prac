@@ -1,0 +1,16 @@
+=== Q09: MySQL 8.4 actual execution ===
+SQL:
+-- Q09: 메뉴 카테고리별 등록 메뉴 수와 평균 가격 집계 (COUNT, AVG)
+SELECT category, COUNT(*) AS menu_count, ROUND(AVG(price), 2) AS avg_price
+FROM menu
+GROUP BY category
+ORDER BY avg_price DESC;
+Result:
++----------+------------+-----------+
+| category | menu_count | avg_price |
++----------+------------+-----------+
+| BEVERAGE |          1 |   5800.00 |
+| TEA      |          2 |   5150.00 |
+| COFFEE   |          5 |   5040.00 |
+| DESSERT  |          2 |   4500.00 |
++----------+------------+-----------+

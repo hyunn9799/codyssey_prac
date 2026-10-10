@@ -1,0 +1,25 @@
+=== Q11: MySQL 8.4 actual execution ===
+SQL:
+-- Q11: 주문별 총 결제 금액 합계 계산 (SUM)
+SELECT o.order_id, o.status, SUM(oi.quantity * oi.unit_price) AS total_amount
+FROM orders o
+INNER JOIN order_item oi ON o.order_id = oi.order_id
+GROUP BY o.order_id, o.status
+ORDER BY total_amount DESC;
+Result:
++----------+-----------+--------------+
+| order_id | status    | total_amount |
++----------+-----------+--------------+
+|        7 | PAID      |     17500.00 |
+|       10 | PAID      |     16500.00 |
+|       12 | PENDING   |     13500.00 |
+|        1 | PAID      |     11500.00 |
+|        2 | PAID      |     11500.00 |
+|        3 | PAID      |     11300.00 |
+|       11 | PAID      |     10700.00 |
+|        6 | PAID      |     10500.00 |
+|        4 | PAID      |     10400.00 |
+|        8 | PAID      |      9600.00 |
+|        9 | PAID      |      8300.00 |
+|        5 | CANCELLED |      5000.00 |
++----------+-----------+--------------+

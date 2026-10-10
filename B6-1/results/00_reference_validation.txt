@@ -1,0 +1,30 @@
+=== MySQL Evaluation Validation ===
+[Tables]
++-------------------------+
+| Tables_in_codyssey_cafe |
++-------------------------+
+| customer                |
+| menu                    |
+| order_item              |
+| orders                  |
++-------------------------+
+[Row counts]
++------------+-----------+
+| table_name | row_count |
++------------+-----------+
+| customer   |        11 |
+| menu       |        10 |
+| orders     |        12 |
+| order_item |        21 |
++------------+-----------+
+[Foreign key relationships]
++------------+-------------+-----------------------+------------------------+
+| TABLE_NAME | COLUMN_NAME | REFERENCED_TABLE_NAME | REFERENCED_COLUMN_NAME |
++------------+-------------+-----------------------+------------------------+
+| order_item | menu_id     | menu                  | menu_id                |
+| order_item | order_id    | orders                | order_id               |
+| orders     | customer_id | customer              | customer_id            |
++------------+-------------+-----------------------+------------------------+
+[Invalid foreign key test]
+ERROR 1452 (23000) at line 1: Cannot add or update a child row: a foreign key constraint fails (`codyssey_cafe`.`orders`, CONSTRAINT `fk_orders_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+PASS: FK rejected nonexistent customer_id (MySQL ERROR 1452).

@@ -1,0 +1,13 @@
+=== Q13: MySQL 8.4 actual execution ===
+SQL:
+-- Q13: 대기 상태(PENDING)인 12번 주문을 결제 완료(PAID) 상태로 수정
+UPDATE orders
+SET status = 'PAID'
+WHERE order_id = 12;
+Result:
+Verification (after UPDATE):
++----------+--------+
+| order_id | status |
++----------+--------+
+|       12 | PAID   |
++----------+--------+

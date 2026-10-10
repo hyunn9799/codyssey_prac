@@ -1,0 +1,25 @@
+=== Q10: MySQL 8.4 actual execution ===
+SQL:
+-- Q10: 고객별 총 주문 횟수 집계 (주문 이력이 없는 고객 포함, COUNT)
+SELECT c.customer_id, c.name AS customer_name, COUNT(o.order_id) AS total_orders
+FROM customer c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name
+ORDER BY total_orders DESC, c.customer_id ASC;
+Result:
++-------------+--------------------+--------------+
+| customer_id | customer_name      | total_orders |
++-------------+--------------------+--------------+
+|           1 | 김민수             |            3 |
+|           2 | 이지은             |            2 |
+|           3 | 박준호             |            1 |
+|           4 | 최수진             |            1 |
+|           5 | 정하늘             |            1 |
+|           6 | 오지훈             |            1 |
+|           7 | 한유진             |            1 |
+|           8 | 강도윤             |            1 |
+|           9 | 윤서아             |            1 |
+|          10 | 임지호             |            0 |
+|          11 | 조하린             |            0 |
+|          12 | 데모삭제대상       |            0 |
++-------------+--------------------+--------------+

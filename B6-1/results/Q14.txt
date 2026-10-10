@@ -1,0 +1,17 @@
+=== Q14: MySQL 8.4 actual execution ===
+SQL:
+-- Q14: 주문 이력이 없는 12번 탈퇴/테스트 고객 데이터 삭제
+DELETE FROM customer
+WHERE customer_id = 12;
+Result:
+Verification (after DELETE):
++------------------+
+| remaining_target |
++------------------+
+|                0 |
++------------------+
++---------------------+
+| remaining_customers |
++---------------------+
+|                  11 |
++---------------------+

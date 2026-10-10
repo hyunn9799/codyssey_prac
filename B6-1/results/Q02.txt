@@ -1,0 +1,23 @@
+=== Q02: MySQL 8.4 actual execution ===
+SQL:
+-- Q02: 등록된 모든 고객의 번호, 이름, 이메일 조회
+SELECT customer_id, name, email
+FROM customer
+ORDER BY customer_id ASC;
+Result:
++-------------+--------------------+--------------------+
+| customer_id | name               | email              |
++-------------+--------------------+--------------------+
+|           1 | 김민수             | minsu@example.com  |
+|           2 | 이지은             | jieun@example.com  |
+|           3 | 박준호             | junho@example.com  |
+|           4 | 최수진             | sujin@example.com  |
+|           5 | 정하늘             | haneul@example.com |
+|           6 | 오지훈             | jihoon@example.com |
+|           7 | 한유진             | yujin@example.com  |
+|           8 | 강도윤             | doyoon@example.com |
+|           9 | 윤서아             | seoa@example.com   |
+|          10 | 임지호             | jiho@example.com   |
+|          11 | 조하린             | harin@example.com  |
+|          12 | 데모삭제대상       | delete@example.com |
++-------------+--------------------+--------------------+
